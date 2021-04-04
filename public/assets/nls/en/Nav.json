@@ -1,5 +1,4 @@
 {
-    "actions": {
-        "logout": "Logout"
-    }
+    "main": "Main",
+    "profile": "Profile"
 }

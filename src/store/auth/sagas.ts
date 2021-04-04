@@ -1,37 +1,19 @@
 import { SagaIterator } from 'redux-saga';
-import { call, takeLeading } from 'redux-saga/effects';
-import { bindAsyncAction } from 'typescript-fsa-redux-saga';
+import { call, put, takeLeading } from 'redux-saga/effects';
 
-import { iocContainer } from '../../ioc/inversifyConfig';
-import { IOC_TYPES } from '../../ioc/types';
-import { THttpServiceFactory } from '../../services/HttpService/models';
+import { AuthService } from '../../services/AuthService';
+import { CommonActionCreators } from '../common/actionCreators';
 
-import { ProfileActionCreators } from './actionCreators';
+import { AuthActionCreators } from './actionCreators';
 
-const httpServiceFactory = iocContainer.get<THttpServiceFactory>(IOC_TYPES.HttpServiceFactory);
-let client = httpServiceFactory({
-    baseURL: 'https://794ba72c-bf36-43ed-b553-bbdd8e49774d.mock.pstmn.io',
-}).client;
+function* logoutSaga(): SagaIterator {
+    const authService = AuthService();
 
-function* fetchSaga(): SagaIterator {
-    return yield call(async () => {
-        const res = await client.get('books', );
+    yield call(() => authService.logout());
+    yield put(CommonActionCreators.setInitialState());
 
-        /* tslint:disable */
-        console.log('##########');
-        console.log('res: ', res);
-        console.log('##########');
-        /* tslint:enable */
-
-        return { data: { firstName: '13131231231' }};
-    });
+    /** Clean other resources if needed here. */
 }
 
-const profileWorkers = {
-    fetch: bindAsyncAction(ProfileActionCreators.fetch, { skipStartedAction: true })(fetchSaga),
-};
-
-/** Crews saga watchers. */
-export const profileWatchers = [
-    takeLeading(ProfileActionCreators.fetch.started.type, profileWorkers.fetch),
-];
+/** Auth saga watchers. */
+export const authWatchers = [takeLeading(AuthActionCreators.logout.type, logoutSaga)];

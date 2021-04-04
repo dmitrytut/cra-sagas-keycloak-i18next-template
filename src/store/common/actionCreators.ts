@@ -4,12 +4,12 @@ import { getActionNamespace } from '../../utils/redux';
 
 import { duckName } from './consts';
 
-enum EAuthActionType {
-    LOGOUT = 'LOGOUT',
+enum ECommonActionType {
+    SET_INITIAL_STATE = 'SET_INITIAL_STATE',
 }
 
 const actionCreator = actionCreatorFactory(getActionNamespace(duckName));
 
-export const AuthActionCreators = {
-    logout: actionCreator(EAuthActionType.LOGOUT),
+export const CommonActionCreators = {
+    setInitialState: actionCreator(ECommonActionType.SET_INITIAL_STATE),
 };

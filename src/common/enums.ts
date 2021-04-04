@@ -6,6 +6,15 @@ export enum ELanguage {
     RU = 'ru',
 }
 
+/** i18n namespaces. */
+export enum ELanguageNs {
+    COMMON = 'Common',
+    AUTH = 'Auth',
+    NAV = 'Nav',
+    MAIN = 'Main',
+    PROFILE = 'Profile',
+}
+
 /**
  * Error levels.
  */

@@ -1,4 +1,4 @@
-import { Action, Failure, Success } from 'typescript-fsa';
+import { Failure, Success } from 'typescript-fsa';
 import { ECheckErrorLevel, EProcessStatus } from './enums';
 
 /**

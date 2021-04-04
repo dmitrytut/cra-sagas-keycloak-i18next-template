@@ -1,1 +1,13 @@
-{}
+{
+  "profilePage": {
+    "title": "Profile page",
+    "info": {
+      "title": "Profile information",
+      "name": "Name",
+      "birthDate": "Birth Date"
+    },
+    "actions": {
+      "fetch": "Fetch profile"
+    }
+  }
+}

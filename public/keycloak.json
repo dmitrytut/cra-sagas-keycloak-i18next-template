@@ -1,8 +1,10 @@
 {
-  "realm": "hanger",
-  "auth-server-url": "http://127.0.0.1:8081/auth/",
+  "realm": "[YOUR REALM]",
+  "auth-server-url": "[YOUR AUTH SERVER URL]",
   "ssl-required": "external",
-  "resource": "keycloak-test",
+  "resource": "[YOUR CLIENT_ID]",
   "public-client": true,
+  "verify-token-audience": true,
+  "use-resource-role-mappings": true,
   "confidential-port": 0
 }

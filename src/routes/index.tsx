@@ -1,24 +1,26 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route } from 'react-router';
+import { BrowserRouter, Redirect, Switch } from 'react-router-dom';
+import { MainLayout } from '../layouts/MainLayout';
 
-import { MAIN_ROUTES } from './consts';
-import { MainPage } from '../components/MainPage';
-import { PrivateRoute } from '../components/PrivateRoute';
-import { MainLayout } from '../components/MainLayout';
+import { MainPage } from '../pages/Main';
+
+import { ROUTES } from './consts';
+import { ProfileRoutes } from './profile';
 
 /**
- * Main application routes.
+ * Application routes.
  */
-export const MainAppRoutes: JSX.Element = (
-    <PrivateRoute
-        render={() => (
-            <MainLayout>
-                <Switch>
-                    <Route component={MainPage} path={MAIN_ROUTES.MAIN_PAGE.PATH} exact />
-                    <Redirect to={MAIN_ROUTES.MAIN_PAGE.PATH} />
-                </Switch>
-            </MainLayout>
-        )}
-        path={MAIN_ROUTES.MAIN_PAGE.PATH}
-    />
+export const AppRouter: React.ReactNode = (
+    <BrowserRouter>
+        <MainLayout>
+            <Switch>
+                <Route component={MainPage} key={ROUTES.MAIN.PATH} path={ROUTES.MAIN.PATH} exact />
+                {/*Profile routes.*/}
+                {ProfileRoutes}
+                {/*No route was found.*/}
+                <Redirect to={ROUTES.MAIN.PATH} />
+            </Switch>
+        </MainLayout>
+    </BrowserRouter>
 );

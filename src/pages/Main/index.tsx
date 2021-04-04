@@ -1,7 +1,3 @@
-import React from 'react';
+import Page from './Page';
 
-export const ProfilePage: React.FC = () => (
-    <div>
-        Profile page
-    </div>
-);
+export const MainPage = Page;

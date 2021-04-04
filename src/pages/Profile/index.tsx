@@ -1,7 +1,3 @@
-import React from 'react';
+import { lazy } from 'react';
 
-export const SetProfilePage: React.FC = () => (
-    <div>
-        Profile page
-    </div>
-);
+export const ProfilePage = lazy(() => import('./Page'));

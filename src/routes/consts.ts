@@ -1,23 +1,14 @@
 /**
- * Main application routes names.
+ * Application routes names.
  */
-export const MAIN_ROUTES = {
-    CREW: {
-        DETAILS: {
-            PATH: '/crew/:id',
-            QUALIFICATIONS: {
-                PATH: '/crew/:id/qualifications',
-            },
-            TIMESHEET: {
-                PATH: '/crew/:id/timesheet',
-            },
+export const ROUTES = {
+    PROFILE: {
+        PATH: '/profile',
+        EDIT: {
+            PATH: '/profile/edit',
         },
-        PATH: '/crew',
     },
-    INTEGRATION: {
-        PATH: '/integration',
-    },
-    MAIN_PAGE: {
+    MAIN: {
         PATH: '/',
     },
 };

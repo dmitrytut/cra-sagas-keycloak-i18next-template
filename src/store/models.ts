@@ -1,8 +1,8 @@
-import type { ICrewsReduxState } from './ducks/crews';
+import { IProfileState } from './profile/models';
 
 /**
- * Main application redux state model.
+ * Application redux state model.
  */
-export interface IMainAppReduxState {
-    crews: ICrewsReduxState;
+export interface IAppState {
+    profile: IProfileState;
 }

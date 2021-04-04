@@ -1,12 +1,13 @@
 {
   "profilePage": {
-    "title": "Profile page",
+    "title": "Профиль",
     "info": {
-      "name": "Name",
-      "birthDate": "Birth Date"
+      "title": "Информация о профайле",
+      "name": "Имя",
+      "birthDate": "Дата рождения"
     },
     "actions": {
-      "fetch": "Fetch profile"
+      "fetch": "Получить профиль"
     }
   }
 }

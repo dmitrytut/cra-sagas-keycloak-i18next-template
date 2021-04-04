@@ -1,1 +1,1 @@
-export const duckName = 'auth';
+export const duckName = 'common';

@@ -1,17 +1,15 @@
 import actionCreatorFactory from 'typescript-fsa';
 
-import { IError } from '../../models';
 import { getActionNamespace } from '../../utils/redux';
 
 import { duckName } from './consts';
-import { IProfileRs } from './models';
 
-enum EProfileActionType {
-    FETCH = 'FETCH',
+enum EAuthActionType {
+    LOGOUT = 'LOGOUT',
 }
 
 const actionCreator = actionCreatorFactory(getActionNamespace(duckName));
 
-export const ProfileActionCreators = {
-    fetch: actionCreator.async<void, IProfileRs, IError>(EProfileActionType.FETCH),
+export const AuthActionCreators = {
+    logout: actionCreator(EAuthActionType.LOGOUT),
 };
