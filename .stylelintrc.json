@@ -1,0 +1,12 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines", "stylelint-config-prettier"],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "no-descending-specificity": null,
+        "selector-class-pattern": null,
+        "max-nesting-depth": null,
+        "scss/at-mixin-pattern": null,
+        "selector-max-compound-selectors": null,
+        "scss/at-import-partial-extension-blacklist": null
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "Actions": {
+        "CLEAR": "Clear",
+        "DOWNLOAD": "Download",
+        "NO": "No",
+        "SUBMIT": "Submit",
+        "YES": "Yes"
+    },
+    "ERRORS": {
+        "wrongLogin": "Incorrect username and/or password"
+    },
+    "Messages": {
+        "NO_DATA": "No data"
+    },
+    "Units": {
+        "days": "d.",
+        "hours": "h.",
+        "year": "y."
+    },
+    "Copyright": "© «Aeroflot» Airlines {{year}}"
+}
