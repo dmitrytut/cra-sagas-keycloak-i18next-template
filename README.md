@@ -2,8 +2,11 @@
 
 Template based on:  
 [Create React App](https://github.com/facebook/create-react-app)
+
 [Redux-saga](https://redux-saga.js.org/docs/introduction/GettingStarted)
+
 [Keycloak](https://www.keycloak.org/docs/latest/getting_started/index.html)
+
 [i18next](https://www.i18next.com/overview/getting-started)
 
 ## Initial configuration
